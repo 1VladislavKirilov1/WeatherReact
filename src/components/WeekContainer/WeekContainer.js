@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../Card/Card';
 import './WeekContainer.css';
 
-const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=Krasnodar&lang=ru&units=metric&appid=#`;
+const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=Krasnodar&lang=ru&units=metric&appid=d9f6b7a101b04761494853ca7d77ba4c`;
 
 class WeekContainer extends React.Component {
     state = {
@@ -16,7 +16,7 @@ class WeekContainer extends React.Component {
     }
 
     fetchWeather = () => {
-        const newWeatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(this.state.selectedCity)}&lang=ru&units=metric&appid=#`;
+        const newWeatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(this.state.selectedCity)}&lang=ru&units=metric&appid=d9f6b7a101b04761494853ca7d77ba4c`;
         fetch(newWeatherURL)
             .then(res => {
                 if(!res.ok) {
